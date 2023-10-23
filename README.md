@@ -11,3 +11,6 @@
   8. 计数排序 Counter
   9. 基数排序 Cardinal
   10. 快速排序 Fast
+图算法
+  1. dijkstra 算法 (最短路径)
+  2. prim 算法 (最小生成树)
