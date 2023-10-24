@@ -1,4 +1,5 @@
 # algorithm
+
 ```
 十大经典排序算法(JAVA代码实现)
   1. 冒泡排序 Bubble
@@ -14,3 +15,6 @@
 图算法
   1. dijkstra 算法 (最短路径)
   2. prim 算法 (最小生成树)
+  3. bellmanFord 贝尔曼福德 最短路径算法
+  4. floyd 弗洛伊德算法 最小生成树
+  5. kruskal 克鲁斯卡尔算法 最小生成树算法
