@@ -27,7 +27,7 @@ public class Graph {
             System.out.println();
 
             for (int j = 0; j < graph[i].length; j++) {
-                System.out.print("   " + graph[i][j] + "    ");
+                System.out.print("   " + graph[i][j] + "     ");
             }
             System.out.println();
         }
