@@ -34,40 +34,35 @@ public class BellmanFord {
 
 
     public void bellmanFord(int start) {
+        Arrays.fill(dis, Integer.MAX_VALUE);
         dis[start] = 0;
         int[][] g = graph.getGraph();
-        // 顶点数
-        int n = g.length;
-        boolean flag = false;
 
-        for (int i = 0; i < n; i++) {
-            flag = false;
-            for (int j = 0; j < n; j++) {
-//                if (dis[j] == Integer.MAX_VALUE) {
-//                    continue;
-//                }
-//
-//                for (int z = 0; z < g[j].length; z++) {
-//                    if (dis[j] + g[z][j] < dis[z]) {
-//                        dis[z] = dis[j] + g[z][j];
-//                        flag = true;
-//                    }
-//                }
-//
-//                // dis[i] > dis[i] + g[i][j]
-                if (dis[j] == Integer.MAX_VALUE && g[i][j] != 0 && dis[j] > dis[i] + g[i][j]) {
-                    dis[j] = dis[i] + g[i][j];
+        for (int i = 1; i < g.length; i++) {
+            boolean flag = false;
+            for (int j = 0; j < g[i].length; j++) {
+                for (int k = 0; k < g[j].length; k++) {
+                    if (g[j][k] == 0) continue;
+                    if (dis[k] > dis[j] + g[j][k]) {
+                        dis[k] = dis[j] + g[j][k];
+                        flag = true;
+                    }
+                    if (!flag) return;
+
                 }
-//
-//                if (dis[i] != Integer.MAX_VALUE && g[j][i] != 0 && dis[j] > dis[i] + g[j][i]) {
-//                    dis[j] = dis[i] + g[j][i];
-//                }
-
-
             }
-//            if (!flag) break;
+
+
         }
 
+        for (int i = 0; i < g.length; i++) {
+            for (int j = 0; j < g[i].length; j++) {
+                if (dis[i] > dis[j] + g[j][i]) {
+                    System.out.println(" 负循环 ");
+                    return;
+                }
+            }
+        }
     }
 
 
