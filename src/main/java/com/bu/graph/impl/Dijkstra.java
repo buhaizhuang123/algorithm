@@ -66,8 +66,7 @@ public class Dijkstra {
                 min = i;
             }
         }
-        if (min != -1) return min;
-        return -1;
+        return min;
     }
 
     public static void main(String[] args) {

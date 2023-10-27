@@ -7,7 +7,7 @@ import java.util.Arrays;
 /**
  * @author haizhuangbu
  * @date 2023/10/24 09:17
- * @mark Floyd 弗洛伊德算法 最小生成树
+ * @mark Floyd 弗洛伊德算法 最短路径
  */
 public class Floyd {
 
